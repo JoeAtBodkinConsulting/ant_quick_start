@@ -87,9 +87,6 @@ public class HWTest extends TestCase {
     </copy>
   </target>
 
-<!-- 
-Broken??? 
--->
   <target name="test" depends="compiletest" description="run the tests " >
     <junit printsummary="yes" fork="yes" haltonfailure="yes">
       <formatter type="plain"/>

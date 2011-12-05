@@ -1,0 +1,41 @@
+Ant quick start project.
+ Find out more at http://www.bodkinconsulting.com
+ or https://github.com/JoeAtBodkinConsulting/ant_quick_start
+ 
+Instructions:
+Put this file in an empty directory and run the 'ant' command in that directory. The build file will create directories and make a very empty jar file in the same directory as the build.xml.
+
+Create src/HW.java and put this code in it.
+
+public class HW
+{
+    public static void main(String [] args)
+    {
+        System.out.println("Hello World");
+    }
+
+}
+
+in the build file below change  
+<property name="main_class_name" value="changeme"/> 
+to 
+<property name="main_class_name" value="HW"/>
+ 
+Run the ant command again, and now you can run your main class with the command
+java -jar antsimple.jar
+
+It should print:
+Hellow World
+and exit.
+
+Add a junit.jar (from junit.org) into your ANT_HOME/lib directory and run 'ant test'
+ 
+Create the file test/HWTest.java and add this code.
+import junit.framework.*;
+public class HWTest extends TestCase {
+    public void testTrue()
+    {
+        assertTrue(true);
+    }
+}
+
